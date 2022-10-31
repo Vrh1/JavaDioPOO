@@ -4,6 +4,7 @@ import java.util.*;
 import br.com.dio.desafio.dominio.Bootcamp;
 import br.com.dio.desafio.dominio.Conteudo;
 import br.com.dio.desafio.dominio.Curso;
+import br.com.dio.desafio.dominio.Dev;
 import br.com.dio.desafio.dominio.Mentoria;
 
 public class Main {
@@ -37,5 +38,19 @@ public class Main {
         bootcamp.getConteudos().add(curso1);
         bootcamp.getConteudos().add(curso2);
         bootcamp.getConteudos().add(mentoria);
+
+        Dev devJoao = new Dev();
+        devJoao.setNome("Camila");
+        devJoao.inscreverBootcamp(bootcamp);
+        System.out.println("Conteúdos Inscritos" + devJoao.getConteudosInscritos());
+        devJoao.progedir();
+        System.out.println("-");
+        System.out.println("Conteúdos Inscritos Joao: " + devJoao.getConteudosInscritos());
+        System.out.println("Conteúdos Concluídos Joao: " + devJoao.getConteudosConcluidos());
+
+        Dev devDani = new Dev();
+        devDani.setNome("Dani");
+        devDani.inscreverBootcamp(bootcamp);
+        System.out.println("Conteúdos Inscritos" + devDani.getConteudosInscritos());
     }
 }
